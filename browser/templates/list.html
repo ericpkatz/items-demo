@@ -1,0 +1,12 @@
+<form name='form'>
+  <div class='form-group'>
+    <input ng-model='item.name' required class='form-control'/>
+  </div>
+  <button ng-disabled='form.$invalid' class='btn btn-primary' ng-click='create()'>Save</button>
+</form>
+<ul class='list-group-item'>
+  <li ng-click='destroy(item)' class='list-group-item' ng-repeat='item in items'>
+    {{ item.name }}
+  </li>
+</ul>
+{{ fizz() }}
